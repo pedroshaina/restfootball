@@ -27,6 +27,7 @@ The following features are not required, but will make us like you more:
 
 * Listing all leagues per language;
 * Listing all players per position;
+* Retrieving a list of all players who play in defense (all postions that end in B plus GK), ordered by their last name, with an optional parameter to choose the sorting order;
 
 ### Constraints ###
 
