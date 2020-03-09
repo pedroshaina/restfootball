@@ -39,3 +39,8 @@ A few constraints will need to be considered when implementing this API:
 * There cannot be more than one league per country;
 * There cannot be more than 20 teams per league;
 * There cannot be more than 25 players in a team;
+
+### Delivering your solution ###
+
+Your solution can be delivered either as a ZIP file containing the source code directly to Matheus' e-mail (m.queiroz@planerio.de) or as a public
+repository we can access (that's the preferred method).
