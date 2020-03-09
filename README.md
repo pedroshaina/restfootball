@@ -17,6 +17,10 @@ able to:
 * Get data for a specific entity;
 * List all entities (pagination is optional but appreciated).
 
+When implementing your solution, remember to keep software engineering and REST API good practices in mind: focus on a clean, 
+readable and maintainable implementation. Always keep in mind that other people will have to read, understand and change your 
+code. Don't code for yourself!
+
 ### Bonus features ###
 
 The following features are not required, but will make us like you more:
