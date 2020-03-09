@@ -17,12 +17,17 @@ able to:
 * Get data for a specific entity;
 * List all entities (pagination is optional but appreciated).
 
+When implementing your solution, remember to keep software engineering and REST API good practices in mind: focus on a clean, 
+readable and maintainable implementation. Always keep in mind that other people will have to read, understand and change your 
+code. Don't code for yourself!
+
 ### Bonus features ###
 
 The following features are not required, but will make us like you more:
 
 * Listing all leagues per language;
 * Listing all players per position;
+* Retrieving a list of all players who play in defense (all postions that end in B plus GK), ordered by their last name, with an optional parameter to choose the sorting order;
 
 ### Constraints ###
 
@@ -34,3 +39,8 @@ A few constraints will need to be considered when implementing this API:
 * There cannot be more than one league per country;
 * There cannot be more than 20 teams per league;
 * There cannot be more than 25 players in a team;
+
+### Delivering your solution ###
+
+Your solution can be delivered either as a ZIP file containing the source code directly to Matheus' e-mail (m.queiroz@planerio.de) or as a public
+repository we can access (that's the preferred method).
