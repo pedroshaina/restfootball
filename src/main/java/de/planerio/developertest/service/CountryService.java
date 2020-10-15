@@ -55,6 +55,8 @@ public class CountryService {
         countryRepository.findById(countryId)
                 .orElseThrow(() -> new ResourceNotFoundException("The country doesn't exist"));
 
+        validate(countryRequest);
+
         final Country country = CountryTransformation.toEntity(countryRequest);
         country.setId(countryId);
 

@@ -19,7 +19,7 @@ import java.util.List;
 @Service
 public class TeamService {
 
-    private static final short MAXIMUM_TEAMS_PER_LEAGUE = 20;
+    public static final short MAXIMUM_TEAMS_PER_LEAGUE = 20;
 
     private final TeamRepository teamRepository;
     private final LeagueRepository leagueRepository;
@@ -59,6 +59,8 @@ public class TeamService {
     public TeamResponse update(final TeamRequest teamRequest, final long teamId) {
         teamRepository.findById(teamId)
                 .orElseThrow(() -> new ResourceNotFoundException("The team doesn't exist"));
+
+        validate(teamRequest);
 
         final Team team = TeamTransformation.toEntity(teamRequest);
         team.setId(teamId);

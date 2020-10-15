@@ -29,7 +29,7 @@ import java.util.Set;
 @Service
 public class PlayerService {
 
-    private static final short MAXIMUM_PLAYERS_PER_TEAM = 25;
+    public static final short MAXIMUM_PLAYERS_PER_TEAM = 25;
 
     private static final Set<PlayerPosition> DEFENSIVE_POSITIONS = ImmutableSet.of(PlayerPosition.GK,
             PlayerPosition.CB,
@@ -95,6 +95,8 @@ public class PlayerService {
     public PlayerResponse update(final PlayerRequest playerRequest, final long playerId) {
         playerRepository.findById(playerId)
                 .orElseThrow(() -> new ResourceNotFoundException("The player doesn't exist"));
+
+        validate(playerRequest);
 
         final Player player = PlayerTransformation.toEntity(playerRequest);
         player.setId(playerId);

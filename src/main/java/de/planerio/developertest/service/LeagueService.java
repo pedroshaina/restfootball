@@ -65,6 +65,8 @@ public class LeagueService {
         leagueRepository.findById(leagueId)
                 .orElseThrow(() -> new ResourceNotFoundException("The league doesn't exist"));
 
+        validate(leagueRequest);
+
         final League league = LeagueTransformation.toEntity(leagueRequest);
         league.setId(leagueId);
 
